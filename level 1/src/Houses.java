@@ -1,13 +1,32 @@
+import java.awt.Color;
+
 import org.teachingextensions.logo.Tortoise;
 
 public class Houses {
 	public static void main(String[] args) {
+		Tortoise.setSpeed(10);
 		Tortoise.setX(20);
 		Tortoise.setY(400);
 		Tortoise.show();
-
+		Tortoise.penDown();
+		for (int j = 0; j < 10; j++) {
+			drawHouse(300, 40);
+		}
 	}
 
+	public static void drawHouse(int size, int length) {
+
+		Tortoise.setPenColor(Color.BLACK);
+		Tortoise.move(size);
+		Tortoise.turn(90);
+		Tortoise.move(length);
+		Tortoise.turn(90);
+		Tortoise.move(size);
+		Tortoise.setPenColor(Color.GREEN);
+		Tortoise.turn(-90);
+		Tortoise.move(20);
+		Tortoise.turn(-90);
+	}
 }
 
 // 1. have the tortoise start in the bottom left corner
