@@ -15,7 +15,7 @@ public class WhackAMole {
 		frame.setVisible(true);
 		frame.setSize(1000, 1000);
 		panel.add(button);
-		panel.add(button);
+
 	}
 
 	JFrame frame = new JFrame();
